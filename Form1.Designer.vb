@@ -42,6 +42,9 @@ Partial Class Form1
         Me.txtstudcourse = New System.Windows.Forms.TextBox()
         Me.txtlast = New System.Windows.Forms.TextBox()
         Me.txtfirst = New System.Windows.Forms.TextBox()
+        Me.btndisplay = New System.Windows.Forms.Button()
+        Me.btnupdate = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -105,7 +108,7 @@ Partial Class Form1
         'btnrecord
         '
         Me.btnrecord.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnrecord.Location = New System.Drawing.Point(35, 210)
+        Me.btnrecord.Location = New System.Drawing.Point(10, 217)
         Me.btnrecord.Name = "btnrecord"
         Me.btnrecord.Size = New System.Drawing.Size(129, 31)
         Me.btnrecord.TabIndex = 9
@@ -118,6 +121,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.btnrecord)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.btndisplay)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtcourse)
         Me.GroupBox1.Controls.Add(Me.txtlname)
@@ -125,14 +129,16 @@ Partial Class Form1
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(15, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(276, 294)
+        Me.GroupBox1.Size = New System.Drawing.Size(276, 343)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Save Record"
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.btndelete)
         Me.GroupBox2.Controls.Add(Me.txtuserId)
+        Me.GroupBox2.Controls.Add(Me.btnupdate)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.btnsearch)
         Me.GroupBox2.Controls.Add(Me.Label4)
@@ -144,7 +150,7 @@ Partial Class Form1
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(321, 25)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(276, 294)
+        Me.GroupBox2.Size = New System.Drawing.Size(287, 343)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         '
@@ -227,11 +233,41 @@ Partial Class Form1
         Me.txtfirst.Size = New System.Drawing.Size(105, 20)
         Me.txtfirst.TabIndex = 0
         '
+        'btndisplay
+        '
+        Me.btndisplay.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndisplay.Location = New System.Drawing.Point(63, 274)
+        Me.btndisplay.Name = "btndisplay"
+        Me.btndisplay.Size = New System.Drawing.Size(141, 35)
+        Me.btndisplay.TabIndex = 12
+        Me.btndisplay.Text = "Display by Course"
+        Me.btndisplay.UseVisualStyleBackColor = True
+        '
+        'btnupdate
+        '
+        Me.btnupdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdate.Location = New System.Drawing.Point(22, 255)
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(110, 33)
+        Me.btnupdate.TabIndex = 13
+        Me.btnupdate.Text = "Update"
+        Me.btnupdate.UseVisualStyleBackColor = True
+        '
+        'btndelete
+        '
+        Me.btndelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.Location = New System.Drawing.Point(159, 255)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(110, 33)
+        Me.btndelete.TabIndex = 14
+        Me.btndelete.Text = "Delete"
+        Me.btndelete.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(729, 450)
+        Me.ClientSize = New System.Drawing.Size(693, 558)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
@@ -263,4 +299,7 @@ Partial Class Form1
     Friend WithEvents txtfirst As TextBox
     Friend WithEvents txtuserId As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents btndisplay As Button
+    Friend WithEvents btnupdate As Button
+    Friend WithEvents btndelete As Button
 End Class
